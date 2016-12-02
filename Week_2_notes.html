@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    section {border: 2px solid gray; background: lightyellow; margin: 5px}
+    </style>
+    <!--<script>
+      if(confirm("Want to go to Disneland?"))
+          document.location.href="http://google.com";
+    </script> -->
+  </head>
+  <body>
+    <h3>This is the notes for class 1 week 2 JS notes</h3>
+    <section>
+      <p>Where to place js in html file?</p>
+      [head] <br>
+      ......load JavaScript libraries here.... <br>
+      [/head] <br>
+      [body] <br>
+      ...... your JavaScript code goes to the end of body ...... <br>
+      [script src="code.js"][/script] <br>
+      [/body]
+    </section>
+    <section>
+      <p>Functions:</p>
+      <ol>
+        <li>alert() ---- pop up alert window</li>
+        <li>confirm() --- pop up a window where you can choose ok or cancle</li>
+        <li>prompt() --- pop up a window where you can write info</li>
+      </ol>
+    </section>
+    <section>
+      <p>Variables</p>
+      <ol>
+        <li>Number</li>
+        <ul>
+          <li>number1 = 34.22</li>
+          <li>number2 = 100</li>
+          <li>big_number = 123e5 --- 12300000</li>
+          <li>small_number = 123e-5 --- 0.00123</li>
+        </ul>
+        <li>String
+            <ul>
+              <li>"name"</li>
+              <li>'name'</li>
+              <li>"It's alright"</li>
+            </ul>
+        </li>
+        <li>Boolean</li>
+        <ul>
+          <li>true</li>
+          <li>false</li>
+        </ul>
+        <li>common changes
+          <ul>
+            <il>count++  || count--  ||  +=  ||   -=  ||  *=  ||  /= </il>
+          </ul>
+         </li>
+         <li>convert one type to another
+         <ul>
+           <li>parseInt() --- convert to integer</li>
+           <li>parseFloat() --- convert to floating number</li>
+           <li>String() --- convert to string</li>
+         </ul>
+         </li>
+      </ol>
+    </section>
+    <section>
+      <p>Events and function</p>
+      <ol>
+        <li>Events
+           <ul type="square">
+             <li>onload event --- [body onload="alart("Hello")"]  ---  when webpage is loaded then show the message</li>
+             <li><a href="calling_function_from_body.html">Example of calling function from body</a></li>
+             <li><a href="calling_function_example.html">Another example of calling function</a></li>
+           </ul>
+        </li>
+        <li>function
+        <ul>
+          <li>  <a href="return_function_itself.html">Return function itself example</a></li>
+        </ul>
+        </li>
+      </ol>
+    </section>
+    <section>
+      <p>Decisions and loops</p>
+      <ol>
+        <li>if / else if/ else</li>
+        <li>switch:<br>
+               switch(variable_name) <br>
+               case "option_1" : do_something_1();<br>
+                                           break;<br>
+              case "option_2" : do_something_2(); <br>
+                                          break; <br>
+              default: do_something3(); <br>
+              <a href="switch_example.html">Switch / case example</a> <br>
+              <a href="anothr_switch_example.html">Another switch example</a>
+        </li>
+        <li>While loop <br>
+               var count = 0; <br>
+               while(condition){ <br>
+                 ......code...... <br>
+                 count++; <br>
+               } <br>
+               <a href="while_loop_example.html">While loop example</a>
+        </li>
+        <li>Do...while <br>
+          var veriable1, veriable2; <br>
+          initial condition; <br>
+              do{ <br>
+              ....... code ...... <br>
+            }while(condition); <br>
+              <a href="do_while_loop_example.html">Example of do while loop</a>
+        </li>
+        <li>Indexof: <br>
+              indexOf() <br>
+              var text = "This is a great program"; <br>
+              result = text.indexOf("at");
+        </li>
+      </ol>
+    </section>
+    <section>
+      <p>Local/global veriables -- - local veriable has higher prioprity <br>
+       If a veriable is created in the function without var, it will be a gloable veriable.
+      </p>
+      <p>Logical Operators ----- && / and---- || / or ----- ! / not <br>
+       If a = false, then !a = true; if a = true then !a = false.
+      </p>
+      <p>function() && function() is doable  ---- but if the first function result is false, the second function will not be excuted</p>
+      <p>function() || function() is doable  ---- but if the first function result is true, the second function will not be excuted</p>
+    </section>
+    <section>
+      <p>Arrays:</p>
+      <ol>
+        <li>var pets = ["dog","cat","rabbit"] <br>
+          var pets = new Array(10) --- An array with 10 enpty elements
+        </li>
+        <li>[] --- pets[2] --- rabbit <br>
+               ------ pets[2] = "bird" ----- pets will be ["dog","cat","bird"]
+        </li>
+        <li>length --- pets.length --- 3</li>
+        <li>unshift() --- pets.unshift("bird") --- adding elements to the beginning of the array --- pets will be ["bird","dog","cat","rabbit"]</li>
+        <li>push() --- pets.push("bird") --- adding extra element to the end of the array --- pets will be ["dog","cat","rabbit","bird"]</li>
+        <li>shift() --- pets.shift() --- remove the first element from the array --- pets will be [cat","rabbit"]</li>
+        <li>pop() --- pets.pop() --- remove the last element of the array --- pets will be ["dog","cat"]</li>
+        <li>concat() --- array1.concat(array2) --- conbine two arrays together --- final array will be [array1,array2]</li>
+        <li>join() --- pets.join(" and ") --- join all elements in pets with and between --- dog and cat and rabbit <br>
+              ---------- pets.join() --- join all elements in pets --- dog,cat,rabbit
+        </li>
+      </ol>
+    </section>
+    <section>
+      <p>Generate a random number: <br>
+        <ol>
+          <li> Math.random() for random numbers with decimal points: <br>
+      var random_number = Math.random(); ---- Generating a random number from 0~1 but not include 0 but not include 1. <br>
+      var random_number = Math.random() * max_value; --- Generating random number from 0~max_value, include 0 and max_value - 1. <br>
+      var random_number = Math.random()
+    </li>
+        <li>Math.floor() for numbers without decimal points: <br>
+              Math.floor(2.988) = 2; <br>
+              Math.floor(Math.random() * max_value) + 1 --- random numbers from 1~max_value
+        </li>
+    </ol>
+      </p>
+      <a href="calling_guessing_game.html">Example of loops named guessing number</a>
+    </section>
+    <script src="intro_to_js_example.js">  </script>
+  </body>
+</html>

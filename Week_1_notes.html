@@ -1,0 +1,449 @@
+<!-- This is the notes of the first week of html-CSS-JS class,
+ the sub files are div_relative_positio_example.html
+div_absolute_position_example.html,
+table_vertical_alignment.html
+ form_password_example.html
+form_upload_file_example.html-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A simple web page</title>
+  <meta name="author" content="Zizhi Cheng">
+  <style>
+  .letter {color: lightgray}
+  .rainbowColors {background: gray}
+  .red {background: red}
+  .orange {background: orange}
+  .yellow {background: yellow}
+  .green {background: green}
+  .blue {background: blue}
+  .indigo {background: indigo}
+  .violet {background: violet}
+  section {
+    border: 1px solid black;
+    margin: 5px;
+    background-color: lightyellow;
+  }
+  body{
+    background-color: lightgray;
+  }
+  #rainbowColors {background: gray}
+  #red {background: red}
+  #orange {background: orange}
+  #yellow {background: yellow}
+  #green {background: green}
+  #blue {background: blue}
+  #indigo {background: indigo}
+  #violet {background: violet}
+
+  a:link {background: yellow}
+  a:visited {background: pink}
+  a.hover {background: lightgreen}
+  a:active {background: purple}
+  li:empty {background: brown}
+
+  table,th,td {border: 1px solid gray; padding: 3px}
+
+</style>
+</head>
+<body id="top">
+  <a href="#buttom">Jump to the buttom</a>
+  <section id="unlist">
+    <h1> This is the first example of this class </h1><hr>
+    <p><b><u>List of contents</u></b></p>
+    <a href="#unlist"> Un-orgenized list</a> <br>
+   <a href="#listdown">List with start number and count down</a><br>
+   <a href="#listup">List with start number and count up</a><br>
+   <a href="#listcapi">List with capital letters</a><br>
+   <a href="#image">Adding image</a><br>
+   <a href="#audio">Adding audio</a><br>
+   <a href="#video">Adding video</a><br>
+   <a href="#letterlink">Adding letter link</a><br>
+   <a href="#imagelink">Adding image link</a><br>
+   <a href="#jump">Jump to the target position</a><br>
+   <a href="#void">Void elements</a><br>
+   <a href="#breaks">Breaks</a><br>
+   <a href="#style">Style with id and class</a><br>
+   <a href="#inline">Inline style and pseudo-classes</a><br>
+   <a href="#table">Table</a><br>
+   <a href="#divspan">Div and span</a><br>
+   <a href="#form">Forms</a> <br>
+   <a href="#formCheckBox">Form choices: text, check box, radio, password, dropDown list(select/option)</a><br>
+  <a href="#formLabel">Form and label and upload files</a> <br>
+  <a href="#inputType">Input types</a><br>
+  <a href="#grouping">Item grouping (form/fieldset)</a><br>
+   <br>
+    <button>Have Fun!!</button>
+  </section>
+  <section>
+    <p>Un orgenized list</p>
+    <ul style="list-style-type: disc">
+      <li>This is a list --- [ul style="list-style-type: disc"]</li>
+    </ul>
+    <ul style="list-style-type: circle">
+      <li>This is a list --- [ul style="list-style-type: circle"]</li>
+    </ul>
+    <ul style="list-style-type: square">
+      <li>This is a list --- [ul style="list-style-type: square"]</li>
+    </ul>
+    <ul style="list-style-type: none">
+      <li>This is a list --- [ul style="list-style-type: none"]</li>
+    </ul>
+  </section>
+  <section id="listdown">
+    <p>List with start number and count down --- /ol start="3 reversed"/</p>
+    <ol start="3" reversed>
+      <li><i>This is a list</i> --- Italic /i/</li>
+      <li><b>This is a list</b> --- Bold /b/</li>
+      <li><em>This is a list</em> --- Important /em/</li>
+      <li><strong>This is a list</strong> -- Strong /strong/</li>
+    </ol>
+  </section>
+  <section id="listup">
+    <p>List with start number and count up --- /ol start="3"/</p>
+    <ol start="3">
+      <li><u>This is a list</u> --- Underline /u/</li>
+      <li><big>This is a list</big> --- big /big/ (do not recommed due to not standarded)</li>
+      <li><small>This is a list</small> --- small /small/ (do not recommend due to not standarded)</li>
+    </ol>
+  </section>
+  <section id="listcapi">
+    <p>List with capital letters</p>
+    <ol type="A">
+      <li>This is a <sub> list</sub> --- sub /sub/ </li>
+      <li>This is a <sup>list</sup> --- sup /sup/ </li>
+      <li>This is a <mark>list</mark> --- highlight /mark/</li>
+    </ol>
+    <ol type="A" reversed>
+      <li><ins>This is a list</ins> --- Inserted /ins/ </li>
+      <li><del>This is a list</del> --- Deleted /del/</li>
+      <li>This is a <span id="yellow">list</span> --- span </li>
+    </ol>
+  </section>
+  <section id="image">
+    <p>Adding Image ---  [img src="..." width="30%" height="30%"] </p>
+  </section>
+  <section id="audio">
+    <p>Adding Audio --- [audio src="..."] [/audio] -- Will not play audio</p>
+    <p>Adding Audio --- [audio src="..." autoplay] [/audio] --- Auto play audio when open webpage</p>
+    <p>Adding Audio --- [audio src="..." controls] [/audio] --- Controlable audio by changing attributes</p>
+    <p>Adding Audio --- [audio src="..." autoplay loop] [/audio] --- Keep auto play audio</p>
+    <p>--- Kind remminding when web browser is out to date <br>
+        [this_new_html_tag] <br>
+           [p]Sorry this brower is not working due to out of date[/p] <br>
+        [/this_new_html_tag]
+    </p>
+  </section>
+    <section id="video">
+    <p>Adding Video --- [video src="..."][/video] --- It doesn't play video</p>
+    <p>Adding Video --- [video src="..." autoplay][/video] --- Auto play video when open page</p>
+    <p>Adding Video --- [video src="..." controls][/video] --- Play video with controls</p>
+    <p>Adding Video --- [video src="..." loop][/video] --- Play loop of the video</p>
+    <p>Adding Video --- [video src="..." alt="description of the video"][/video] --- Show description of the video if cannot play the video</p>
+    <p>Browser cannot play video --- <br>
+          [video src="..." controls] <br>
+            [p]Sorry! Your browser does not support the [i]video[/i] tag [/p] <br>
+          [/video]
+    </p>
+  </section>
+  <section id="letterlink">
+    <p>Adding clickabout letter links --- [a href="..."]gmail[/a] account every 10 minutes! <br>
+          <a href="https://www.coursera.org">Coursera</a> is a great website for learning!
+    </p>
+  </section>
+<section id="imagelink">
+    <p>Adding clickabout image links --- [a href="..."]gmail[/a] account every 10 minutes! <br>
+          <a href="https://www.coursera.org">
+          <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0id
+          XRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjIuMCwgU1Z
+          HIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg
+          o8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJod
+          HRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgogICB3aWR0aD0iMTA4cHgiIGhlaWdodD0iMTdweCIgdmlld0JveD0iMCAwIDEwOCAxNyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTA4IDE3IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iIzc1NzU3NSIgZD0iTTU0LjI4MSw1Ljc3M2MwLjA2Ni0xLjI2OSwwLjUyMS0yLjMwNiwxLjIzMi0zLjExNVYxLjU4aC0wLjk0NWMtMS45MSwwLTMuNTI3LDAuNzMyLTQuNDY3LDIuMzg2aC0wLjA1NQogIFYxLjc2MmgtNC44OTl2MTMuNDQxaDQuOVY5Ljc3N2MwLTIuMzAzLDAuNjc0LTQuMDU5LDMuMzkzLTQuMDU5QzUzLjczNiw1LjcyLDU0LjAxMyw1LjczNyw1NC4yODEsNS43NzN6Ii8+CjxwYXRoIGZpbGw9IiM3NTc1NzUiIGQ9Ik05MS4zOCw1LjcyNGMwLjQwNy0xLjE4OCwxLjA2Ny0yLjI0NiwxLjkyNS0zLjA5NXYtMS4wNWgtMC45NDNjLTEuOTExLDAtMy41MjYsMC43MzItNC40NzEsMi4zODVoLTAuMDUzCiAgVjEuNzYyaC00LjkwMnYxMy40NDFoNC45MDJWOS43NzdjMC0yLjMwMywwLjY3Ni00LjA1OSwzLjM5NS00LjA1OUw5MS4zOCw1LjcyNHoiLz4KPHBhdGggZmlsbD0iIzc1NzU3NSIgZD0iTTY0LjIzMiw1LjIyYy0wLjc1Ni0wLjM5My0xLjgwOC0wLjY1NS0yLjY0NS0wLjY1NWMtMC41NjIsMC0xLjUzMywwLjIzNC0xLjUzMywwLjkxNwogIGMwLDAuOTE4LDEuNTMzLDEuMDQ4LDIuMjExLDEuMTgyYzIuMjg0LDAuNDQ0LDQuMDEyLDEuNDkzLDQuMDEyLDMuOTc5YzAsMy41MzYtMy4zMTMsNS4wMDgtNi41Miw1LjAwOAogIGMtMS45NjcsMC0zLjkwMi0wLjU1MS01LjU3NC0xLjU0N2wxLjc3Ny0zLjMzYzAuOTk1LDAuNjg0LDIuNjY1LDEuMzYzLDMuODc3LDEuMzYzYzAuNjIsMCwxLjUzNS0wLjI4NywxLjUzNS0xLjAyMQogIGMwLTEuMDQ4LTEuNTM1LTEuMTAzLTMuMDcyLTEuNDk1Yy0xLjUzMy0wLjM5My0zLjA2Ni0xLjEyNS0zLjA2Ni0zLjUzNmMwLTMuMzAyLDMuMDY2LTQuNzY3LDYuMDg4LTQuNzY3CiAgYzEuNTYyLDAsMy4xMjUsMC4yMzUsNC41NDksMC44NjRMNjQuMjMyLDUuMjJ6Ii8+CjxwYXRoIGZpbGw9IiM3NTc1NzUiIGQ9Ik0xMDgsMTUuMjAzaC00Ljl2LTEuNDk1aC0wLjA1NGMtMC44NjIsMS4zMzYtMi41NjIsMS45MzgtNC4xNzUsMS45MzhjLTQuMDk2LDAtNi45NzUtMy4zMjgtNi45NzUtNy4xOAogIGMwLTMuODQ4LDIuODI4LTcuMTUxLDYuOTItNy4xNTFjMS41ODgsMCwzLjI2LDAuNTc2LDQuMjgzLDEuNzU0VjEuNzYyaDQuODk5TDEwOCwxNS4yMDNMMTA4LDE1LjIwM3ogTTk2Ljk1OSw4LjQ5NQogIGMwLDEuNzAyLDEuMTYsMy4wMTIsMy4xNSwzLjAxMmMxLjk5MiwwLDMuMTQ3LTEuMzA4LDMuMTQ3LTMuMDEyYzAtMS42NTEtMS4xNTUtMy4wMzktMy4xNDctMy4wMzkKICBDOTguMTE5LDUuNDU3LDk2Ljk1OSw2Ljg0NCw5Ni45NTksOC40OTV6Ii8+CjxwYXRoIGZpbGw9IiM3NTc1NzUiIGQ9Ik04Mi4xNjMsOS4yODNINzEuODQ2YzAsMS45MzcsMS4wNTMsMi45ODQsMy4wNzIsMi45ODRjMS4wNSwwLDEuODAzLTAuMzM5LDIuMzQzLTEuMjMxaDQuNzE0CiAgYy0wLjc4MSwzLjE3MS0zLjg3OSw0LjYxMi03LjAyOSw0LjYxMmMtNC41NzUsMC03Ljk5NS0yLjUxNy03Ljk5NS03LjE1MmMwLTQuNDgsMy4xNDctNy4xNzgsNy42NDQtNy4xNzgKICBjNC43OTMsMCw3LjU3LDIuODgzLDcuNTcsNy40NjZMODIuMTYzLDkuMjgzTDgyLjE2Myw5LjI4M3ogTTc3LjYxMSw2LjUzYy0wLjI0My0xLjI4NC0xLjQ1NS0yLjEyMi0yLjc3My0yLjEyMgogIGMtMS40MjksMC0yLjYwOSwwLjczMS0yLjkxLDIuMTIySDc3LjYxMXoiLz4KPGc+CiAgPGc+CiAgICA8cGF0aCBmaWxsPSIjNzU3NTc1IiBkPSJNMjkuNTYxLDguMjYxYy0wLjAwNS0wLjExNi0wLjAxMy0wLjIyOS0wLjAyMi0wLjM0NGMwLDAsMC0wLjAwMSwwLTAuMDAyYzAsMCwwLTAuMDAxLDAtMC4wMDIKICAgICAgYy0wLjExLTEuMjQ3LTAuNTIyLTIuNDE0LTEuMjIxLTMuNDY4Yy0wLjMxMi0wLjQ3LTAuNjY5LTAuODk3LTEuMDY4LTEuMjhjLTAuNTgzLTAuNTYxLTEuMjU4LTEuMDI1LTIuMDE5LTEuMzkyCiAgICAgIGMtMS4xNDUtMC41NDctMi40MS0wLjgyMy0zLjc2LTAuODIzYy0wLjEzMiwwLTAuMjcsMC4wMDItMC40MDksMC4wMDdDMjAuMTE0LDEsMTkuMTk3LDEuMTgsMTguMzM1LDEuNDk3CiAgICAgIGMtMC44NjksMC4zMTQtMS42MjYsMC43MjktMi4yNDUsMS4yMjdjLTAuMTI2LDAuMS0wLjI2MywwLjIyMy0wLjQxLDAuMzU4bC0wLjEwNiwwLjEwNEwxNS40MjksMy4zNGgwLjAwMWgwLjAwMWwtMC4wNjgsMC4wNjcKICAgICAgTDE1LjMzLDMuNDQzbC0wLjE3MywwLjE4MmMtMC4xMjgsMC4xNDQtMC4yNSwwLjI4OC0wLjM2NCwwLjQyOWwtMC4wMDEtMC4wMDJsLTAuMDA0LTAuMDA0Yy0wLjIzNywwLjI4OC0wLjQ1NiwwLjU4Ni0wLjYxNywwLjg1NAogICAgICBjLTAuMTA5LDAuMTcyLTAuMjE2LDAuMzQ5LTAuMzE4LDAuNTI2TDEyLjQ0LDguMjg1bDAuMDAyLDAuMDAybC0wLjA3NCwwLjE0NWwtMC4xNTYsMC4zMTZjLTAuMzEsMC42MjctMC42NDIsMS4yNTItMS4wMTMsMS43NjgKICAgICAgYy0wLjgyNywwLjkwNy0xLjc2MiwxLjM1MS0yLjk2NCwxLjM1MWMtMC4wODQsMC0wLjE3LTAuMDA0LTAuMjU4LTAuMDA5Yy0wLjcyNC0wLjAyOS0xLjM0NS0wLjItMS44OTYtMC41MjYKICAgICAgYy0wLjA1OS0wLjAzNS0wLjExNi0wLjA3MS0wLjE3MS0wLjEwOGMtMC40NS0wLjI5OS0wLjc5NS0wLjY4My0xLjA1My0xLjE2MmMtMC4yOTEtMC41NDMtMC40Mi0xLjA5OC0wLjQwMi0xLjY4NgogICAgICBDNC40NTYsOC4zNiw0LjQ1Nyw4LjM0Niw0LjQ1Nyw4LjMzM0M0LjQ5Niw3LjM5Nyw0Ljg1Myw2LjY2OSw1LjU3Miw2LjA0QzUuNzQ3LDUuODg5LDUuOTMsNS43NjEsNi4xMjEsNS42NDcKICAgICAgYzAuMDI3LTAuMDE2LDAuMDU0LTAuMDMxLDAuMDgxLTAuMDQ1YzAuNTM0LTAuMjkxLDEuMTQyLTAuNDM2LDEuODM5LTAuNDM2bDAuMjE3LDAuMDA2QzkuMzY1LDUuMjE0LDEwLjIxOSw1LjU2LDEwLjksNi4yMzUKICAgICAgTDEzLjAzNiwyLjRjLTAuNTExLTAuMzQyLTEuMDg4LTAuNjM2LTEuNzI0LTAuODc1Yy0wLjAyNC0wLjAwOS0wLjA0OS0wLjAxOS0wLjA3NC0wLjAyN2MtMC4wNzYtMC4wMjctMC4xNTEtMC4wNTUtMC4yMjktMC4wOAogICAgICBDMTAuMzMzLDEuMTkyLDkuNjI0LDEuMDUzLDguODk0LDAuOTlsMCwwQzguODc2LDAuOTg3LDguODU2LDAuOTg1LDguODM4LDAuOTgzQzguNzI2LDAuOTc2LDguNjEyLDAuOTYyLDguNSwwLjk1NwogICAgICBDOC4zNzgsMC45NTIsOC4yNTUsMC45NSw4LjEzNSwwLjk0OUg4LjA2NmMtMS4zNDMsMC4wMDUtMi41OTEsMC4yOC0zLjczMiwwLjgyNUMzLjA1NiwyLjM5LDIuMDIsMy4yODcsMS4yNTIsNC40NDMKICAgICAgQzAuNDg2LDUuNTk5LDAuMDY4LDYuODgyLDAuMDA4LDguMjU5QzAuMDAzLDguMzc3LDAsOC40OTQsMCw4LjYwOWMtMC4wMDEsMS45MjYsMC43MDEsMy42MiwyLjA5Nyw1LjA0MgogICAgICBjMS40NTcsMS40OTIsMy4zNTIsMi4yOTYsNS42MjcsMi4zOTFjMC4xNDYsMC4wMDYsMC4yOSwwLjAxLDAuNDM0LDAuMDFjMS4yODcsMCwyLjQ3OC0wLjIyOSwzLjU0Ni0wLjY4NwogICAgICBjMC4yNjctMC4xMTQsMC41MjYtMC4yNDgsMC43OTEtMC4zOTdjMC4xNDQtMC4wODMsMC4yOC0wLjE3MSwwLjQxNS0wLjI2NWwwLjEtMC4wNjdsMC4xNjgtMC4xMTUKICAgICAgYzAuMjAyLTAuMTQ1LDAuMzkxLTAuMzAyLDAuNTc1LTAuNDY5bDAuMDY0LTAuMDYxYzAuMTA4LTAuMTAzLDAuMjE2LTAuMjA3LDAuMzE4LTAuMzE0bDAuMzgzLTAuNDMzbDAuMTQ2LTAuMTgzbDAuMDY4LTAuMQogICAgICBsMC4wNjgtMC4wOThjMC41NjktMC45NTYsMi40MjEtNC40MzUsMi40MjEtNC40MzVWOC40MjFsMC4xMS0wLjIxMmwwLjA5Mi0wLjE2NmMwLjI3My0wLjQ5NywwLjQ3LTAuODUsMC43MzEtMS4yMjFsMC4wMDctMC4wMTEKICAgICAgYzAuNjA5LTAuODgzLDEuNjU2LTEuNTEyLDIuODktMS42MThjMi4wNy0wLjE3OCwzLjg4NCwxLjE4Miw0LjA1MSwzLjAzOGMwLjE2NiwxLjg1Ni0xLjM3OCwzLjUwNS0zLjQ0OCwzLjY4NAogICAgICBjLTAuNDMxLDAuMDM3LTAuODUsMC4wMDgtMS4yNDUtMC4wNzlsLTAuMDEsMC4wMDRjLTEuNTE5LTAuMzE2LTIuNDg2LTEuNDI0LTIuOTYzLTEuOTE5bC0xLjk5MiwzLjY2MwogICAgICBjMCwwLDAuNjE5LDAuNjI0LDEuMDQzLDAuOTM2YzAuNDI1LDAuMzExLDAuOTc0LDAuNjE3LDEuNDEyLDAuODA3YzEuMDYzLDAuNDU0LDIuMjE5LDAuNzI2LDMuNDk2LDAuNzI2CiAgICAgIGMwLjE0OCwwLDAuMTE4LDAsMC4yNzItMC4wMDZjMi4yNzMtMC4wOTUsNC4yOTktMC45NjYsNS43Ni0yLjQ1OGMxLjM4NC0xLjQxNywyLjEzNS0zLjAzNSwyLjE0Mi00Ljk1VjguNTgyCiAgICAgIEMyOS41NjgsOC40NzYsMjkuNTY1LDguMzY5LDI5LjU2MSw4LjI2MXoiLz4KICA8L2c+CjwvZz4KPGc+CiAgPHBhdGggZmlsbD0iIzc1NzU3NSIgZD0iTTM3LjE4MSwxNS42NTdjLTEuMDMzLDAtMS45Ny0wLjEyLTIuODExLTAuMzZjLTAuODQxLTAuMjQtMS41NTktMC42MTktMi4xNTQtMS4xMzkKICAgIGMtMC41OTctMC41Mi0xLjA1Ny0xLjE4Mi0xLjM4MS0xLjk4NXMtMC40ODYtMS43NzEtMC40ODYtMi44OTlWMS43NTloNC43Mjd2Ny40NTVjMCwwLjg0NSwwLjIwMiwxLjQ1NywwLjYwNSwxLjgzOQogICAgYzAuNDA0LDAuMzgzLDAuOTE3LDAuNTc0LDEuNTM5LDAuNTc0YzAuNjM2LDAsMS4xNTItMC4xNzgsMS41NS0wLjUzNWMwLjM5Ni0wLjM1NywwLjU5Ni0wLjk0OSwwLjU5Ni0xLjc4MVYxLjc1OWg0LjcyN3Y3LjQxNgogICAgYzAsMS4xNjgtMC4xNjYsMi4xNjEtMC40OTcsMi45NzhjLTAuMzMxLDAuODE4LTAuNzk4LDEuNDg2LTEuMzk5LDIuMDA2Yy0wLjYwNCwwLjUyLTEuMzMxLDAuODk4LTIuMTg2LDEuMTM5CiAgICBDMzkuMTU2LDE1LjUzNywzOC4yMTMsMTUuNjU3LDM3LjE4MSwxNS42NTd6Ii8+CjwvZz4KPC9zdmc+"></a> is a great website for learning!
+    </p>
+  </section>
+  <section id="jump">
+    <p>
+     Jump to other session of the same page --- put id at the target position [p id="here"] [a href="#here"]Go to the top[/a]<br>
+      <a href="#unlist">Un-orgenized list</a>
+    </p>
+    <p>
+      Jump to the target position in another web page --- <br>
+      Put id at the target position in another web page, <br>
+      then on the current page [a href="web_page.html #here"]Go to the top[/a]
+    </p>
+  </section>
+  <section id="void">
+    <p>Void Elements --- [img]  [meta] [audio] --- tages without ending tag [/...]</p>
+  </section>
+  <section id="breaks">
+    <p>Breaks --- <br>
+       [br]---starts with a new line <br>
+       [wbr]---for long words <br>
+       [hr]---place a line
+    </p>
+  </section>
+  <section id="style">
+    <p>Style ---
+     <ol>
+       <li>color  --- for text color</li>
+       <li>background  --- for background color</li>
+       <li>front-family  --- for text fonts</li>
+       <li>font-size  --- for text sizes</li>
+       <li>text-align  --- for text alignment</li>
+       <li> id --- [sytle] [#red{color: red;}] [/style] ---- [body id="violet"]
+              <ul id="rainbowColors" style="list-style-type:square">
+                <li id="red">Red</li>
+                <li id="orange">Orange</li>
+                <li id="yellow">Yellow</li>
+                <li id="green">Green</li>
+                <li id="blue">Blue</li>
+                <li id="indigo">Indigo</li>
+                <li id="violet">Violet</li>
+              </ul>
+       </li>
+       <li>class ---  [sytle] [.red{color: red;}] [/style] [body class="red"] --- one element can has multiple classes
+         <ul class="rainbowColors" style="list-style-type:circle">
+           <li class="red letter">Red</li>
+           <li class="orange letter">Orange</li>
+           <li class="yellow letter">Yellow</li>
+           <li class="green letter">Green</li>
+           <li class="blue letter">Blue</li>
+           <li class="indigo letter">Indigo</li>
+           <li class="violet letter">Violet</li>
+         </ul>
+       </li>
+     </ol>
+    </p>
+  </section>
+  <section id="inline">
+    <p>Inline style(higher priority) --- <br>
+       [p style="text-align:right"] --- text align at the right side <br>
+        [style] ul li {color: red}[/style] --- li in ul will be red
+    </p>
+    <p>Pseudo-classes ---
+      <ol>
+        <li>link --- a:link {color: red}</li>
+        <li>visited --- a:visited {color: red} --- visited link will show red</li>
+        <li>hover  --- h1:hover {color: red} <br>
+          --- when the mouse moves over any h1 the text temporarily changes to red </li>
+        <li>active --- a:active {color:red} --- link is currently being visited will show red</li>
+        <li>empty --- p:empty {color: red} --- empty element will show red </li>
+        <li></li>
+      </ol>
+      <a href="https://www.coursera.org">This link will change color</a>
+      <a href="http://www.cnn.com">This link will change color</a>
+      <a href="http://www.google.com">This link will change color</a>
+      <a href="http://www.facebook.com">This link will change color</a>
+    </p>
+  </section>
+  <section id="table">
+    <p>Tables --- [table] [thead] [tbody] [th] [tr] [td]</p>
+    <p>[table] <br>
+          [thead] <br>
+               [tr]  [th] ... [/th] [th] ... [/th] [/tr] <br>
+          [/thead]     <br>
+          [tbody] <br>
+               [tr]  [td] ... [/td] [td] ... [/td] [/tr] <br>
+          [/tbody]  <br>
+          [/table]
+    </p>
+    <p>Table style</p>
+    <ol>
+      <li>color --- for text color</li>
+      <li>text-align --- for horizontal tex allignment</li>
+      <li>border --- for table borders</li>
+      <li>width/height --- for table width and height</li>
+      <li>vertical-align --- for vertical text alignment</li>
+      <li>padding --- for table padding</li>
+    </ol>
+    <p>Table 1</p>
+    <table>  <!--go top to see style in header-->
+      <thead>
+        <tr>  <th>list 1</th>  <th>list 2</th>  <th>list 3</th>  <th>list4</th>  </tr>
+      </thead>
+      <tbody>
+       <tr><td id="yellow">html</td> <td>css</td> <td>js</td> <td>jQ</td> </tr>
+       <tr> <td>html</td> <td id="green">css</td> <td>js</td> <td>jQ</td> </tr>
+      </tbody>
+    </table>
+    <p>Table 2 --- vertical-alignment</p>
+    <a href="table_vertical_alignment.html #ver_table ">Go to the table</a>
+  </section>
+  <section id="divspan">
+  <p>Div and position</p>
+  <ol>
+    <li>font-size</li>
+    <li>font-family</li>
+    <li>background</li>
+    <li>position</li>
+    <li>top/left</li>
+    <li>width</li>
+  </ol>
+  <a href="div_absolute_position_example.html #here">Go to the div absolute position example</a><br><br>
+  <a href="div_relative_position_example.html #here">Go to the div relative position example</a>
+  </section>
+  <section id="form">
+    <p>Forms</p>
+    <ol>
+      <li>[form]</li>
+      <li>[textarea] --- name, rows, cols</li>
+      <li>Input type:<ul type="square">
+        <li>[input type="submit"]</li>
+        <li>[input type="text"]</li>
+        <li>[input type="password"]</li>
+        <li>[input type="checkbox"]</li>
+        <li>[input type="radio"]</li>
+      </ul>
+      </li>
+      <li><ul>
+        <li>[form action="http://www.server.com/subdirectory/program.php"]</li>
+        <li>[form action="subdirectory/program.php"] --- if the php file and html come from the same server </li>
+        <li>[form action="program.php"] --- if php file and html using the same direction</li>
+      </ul></li>
+      <li>get method --- for sending small file to the server</li>
+      <li>post method --- for sending large file to the server and keep file in the secret</li>
+    </ol>
+    <p>[form action="destination of the server(xxx.php)" method="get or post"] <br>
+        [input type="submit"] <br>
+       [/form]
+      </p>
+      <p>
+        <b>Example of a form:</b> <br>
+       <form>
+         <p>Please enter any feedback you have.</p>
+         <textarea name="feedback" rows="3" cols="60">
+           Please enter your text here
+         </textarea>
+       </form>
+      </p>
+      <p><b>Another example of form with php submit</b></p>
+      <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
+        <p>Please enter any feedback you have.</p>
+        <textarea name="feedback" rows="3" cols="60">
+        </textarea>
+        <br>
+        <input type="submit" value="Send">
+      </form>
+  </section>
+  <section id="formCheckBox">
+ <p><b>Examples of  form choices</b></p>
+ <ol>
+   <li>text: <br>
+     <mark>Using value for default text</mark> --- set default text which will not dispear after typing
+    <form>
+      Please enter your name. <br>
+      <input type="text" name="feedback" rows="6" cols="60" value="Please type here!">
+    </form>
+   </li>
+   <br>
+   <li>Checkbox: <br>
+     <form>Please select each of the following that you have <br>
+     <input type="checkbox" nane="items" value="car" checked>Car <br>
+    <input type="checkbox" name="items" value="house">House <br>
+    <input type="checkbox" name="items" value="computer">Computer <br>
+      </form>
+   </li>
+   <br>
+   <li>Radio: <br>
+     <mark>Using autofocus attribute</mark> --- high light the required part
+     <form> Please indicate your intelligence level. <br>
+     <input type="radio" name="iq" value="high" autofocus>High <br>
+     <input type="radio" name="iq" value="medium" checked>Medium <br>
+     <input type="radio" name="iq" value="low">Low <br>
+     </form>
+   </li>
+   <br>
+   <li>Password: --- apperence looks same as text, but it will hide the letters you type in<br>
+         Do not use get method, because this will show the password in URL <br>
+         <mark>Using placeholder attributes.</mark> --- set default text which will dispear after typing <br>
+         <mark>Using required attribute in the example below</mark> --- without required part info cannot send
+   <form>
+     <p>What is the password?</p>
+     <input type="password" name="userpassword" placeholder="Type in password"> <br>
+   </form>
+   <p> <a href="form_password_example.html">Example of password with real sever submit</a></p>
+   </li>
+   <li>Drop down menu: <br>
+   <form>
+     <p>What city would you like to travel to?</p>
+     <select name="cities">
+       <option value="hk">Honkong</option>
+       <option value="vc">Vancouver</option>
+       <option value="sf">San Francisco</option>
+     </select>
+   </form>
+   </li>
+ </ol>
+  </section>
+  <section id="formLabel">
+    <p>Lable in the form</p>
+    [label for="firstname"]First name: [/lable] --- this give the text area a related name
+    [input type="text" id="firstname"(This has to be the same as content of for in label) name="firstname"] <br>
+    <br>
+    <form>
+   <label for="firstname">First name: </label>
+   <input type="text" id="firstname" name="firstname" autofocus><br>
+   <label for="lastname">Last name: </label>
+   <input type="text" id="lastname" name="lastname"><br>
+   <label for="age">Age:  </label>
+   <input type="text" id="age" name="age">
+   <br>
+   <input type="submit" value="Submit">
+    </form>
+    <p>Uploading files: </p>
+    <form action="destination" method="post" enctype="multipart/form-data">
+      <input type="file" name="fileToUpload"> <br>
+      <input type="submit">
+    </form><br>
+    <a href="form_upload_file_example.html">Real world example of upload files</a>
+  </section>
+  <section id="inputType">
+    <p>Input types: </p>
+    <ol>
+      <li>Number input --- [input type="number"]</li>
+      <label for="age">Your age: </label>
+      <input type="number" id="age" name="age" min="0" max="99" step="1" value="18">
+      <li>Date input --- [input type="date"]</li>
+      <label for="birthday">Your birthday: </label>
+      <input type="date" id="birthday" name="birthday">
+      <li>Time input --- [input type="time"]</li>
+      <label for="wakeuptime">You want to wake up at: </label>
+      <input type="time" id="wakeuptime" name="wakeuptime">
+      <li>Color picker --- [input type="color"]</li>
+      <label for="color">Your favorite color: </label>
+      <input type="color" id="color" name="color">
+      <li>Slider --- [input type="range"]</li>
+      <label for="range">Your mood: </label>
+      Bad<input type="range" id="range" name="range" min="0" max="100" step="5" value="50">Good<br>
+      <input type="submit" value="Submit!">
+      </ol>
+  </section>
+  <section id="grouping">
+    <p>Item grouping</p>
+    <form>
+      <fieldset>
+        <legend>Personal Information</legend>
+        First name? <input type="text" name="firstName"><br>
+        Last name? <input type="text" name="lastName"><br>
+      </fieldset><br>
+      <fieldset>
+        <legend>Favourite Things</legend>
+        Favourite cartoon? <input type="text" name="cartoon"><br>
+        Facourite pizza? <input type="text" name="pizza"><br>
+      </fieldset><br>
+      <input type="submit" value="Submit!">
+    </form><br>
+          <p>Grouping wihout form</p>
+    <div>
+      <fieldset>
+        <legend>Friends</legend>
+        zizhi <br>
+        ryan <br>
+      </fieldset>
+    </div>
+  </section>
+  <p id="buttom">End</p>
+  <a href="#top">Jump to the top</a>
+</body>
+</html>
